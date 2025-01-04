@@ -1,7 +1,11 @@
-const DocumentsLayout = () => {
+interface DocumentLayoutProps {
+    children: React.ReactNode;
+}
+
+const DocumentsLayout = ({ children }: DocumentLayoutProps) => {
     return ( 
     <div>
-        dcoumentslayout
+        {children}
     </div> 
     );
 }
