@@ -253,4 +253,14 @@ body {
       outline: 3px solid var(--purple);
     }
   }
+
+  /* Link */
+  a {
+    color: var(--blue-2);
+    cursor: pointer;
+
+    &:hover {
+      @apply underline;
+    }
+  }
 }
