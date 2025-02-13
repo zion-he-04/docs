@@ -20,6 +20,7 @@ import { DocumentInput } from "./document-input";
 import { BoldIcon, FileIcon, FileJsonIcon, FilePenIcon, FilePlusIcon, FileTextIcon, GlobeIcon, ItalicIcon, PrinterIcon, Redo2Icon, RemoveFormattingIcon, StrikethroughIcon, TextIcon, TrashIcon, UnderlineIcon, Undo2Icon } from "lucide-react";
 import { BsFilePdf } from "react-icons/bs";
 import { useEditorStore } from "@/store/use-editor-store";
+import { OrganizationSwitcher, UserButton } from "@clerk/nextjs";
 
   
 export const Navbar = () => {
@@ -203,6 +204,16 @@ export const Navbar = () => {
 						</Menubar>
 					</div>
 				</div>
+			</div>
+			<div className="flex gap-3 items-center pl-6">
+				{/* Refresh after organisation switch */}
+				<OrganizationSwitcher
+				afterCreateOrganizationUrl="/"
+				afterLeaveOrganizationUrl="/"
+				afterSelectOrganizationUrl="/"
+				afterSelectPersonalUrl="/"
+				/>
+				<UserButton />
 			</div>
 		</nav>
 	);
