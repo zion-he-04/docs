@@ -82,12 +82,15 @@ body {
   }
 }
 
-@layer utilities {
-  .border-border {
-    border-color: #ccc; /* Adjust as needed */
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
   }
 }
-
 
 .tiptap {
   /* Heading */

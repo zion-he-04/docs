@@ -6,6 +6,7 @@ import { useMutation } from "convex/react";
 import { api } from "../../convex/_generated/api";
 import { useState } from "react";
 import { toast } from "sonner";
+import { useRouter } from "next/navigation";
 
 interface RemoveDialogProps {
   documentId: Id<"documents">;
@@ -13,6 +14,7 @@ interface RemoveDialogProps {
 }
 
 export const RemoveDialog = ({ documentId, children }: RemoveDialogProps) => {
+	const router = useRouter();
 	const remove = useMutation(api.documents.removeById);
 	const [isRemoving, setIsRemoving] = useState(false);
 
@@ -39,7 +41,10 @@ export const RemoveDialog = ({ documentId, children }: RemoveDialogProps) => {
 							setIsRemoving(true);
 							remove({ id: documentId })
 								.catch(() => toast.error("Permission denied"))
-								.then(() => toast.success("Document removed successfully"))
+								.then(() => {
+									toast.success("Document removed successfully");
+									router.push("/");
+								})
 								.finally(() => setIsRemoving(false));
 						}}
 					>

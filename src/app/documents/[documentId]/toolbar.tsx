@@ -354,58 +354,58 @@ export const Toolbar = () => {
   }[][] = [
     [
       {
-          label: "Undo",
-          icon: Undo2Icon,
-          onClick: () => editor?.chain().focus().undo().run(),
+        label: "Undo",
+        icon: Undo2Icon,
+        onClick: () => editor?.chain().focus().undo().run(),
       },
       {
-          label: "Redo",
-          icon: Redo2Icon,
-          onClick: () => editor?.chain().focus().redo().run(),
+        label: "Redo",
+        icon: Redo2Icon,
+        onClick: () => editor?.chain().focus().redo().run(),
       },
       {
-          label: "Print",
-          icon: PrinterIcon,
-          onClick: () => window.print(),
+        label: "Print",
+        icon: PrinterIcon,
+        onClick: () => window.print(),
       },
     ],
     [
       {
-          label: "Bold",
-          icon: BoldIcon,
-          onClick: () => editor?.chain().focus().toggleBold().run(),
-          isActive: editor?.isActive("bold"),
+        label: "Bold",
+        icon: BoldIcon,
+        onClick: () => editor?.chain().focus().toggleBold().run(),
+        isActive: editor?.isActive("bold"),
       },
       {
-          label: "Italic",
-          icon: ItalicIcon,
-          onClick: () => editor?.chain().focus().toggleItalic().run(),
-          isActive: editor?.isActive("italic"),
+        label: "Italic",
+        icon: ItalicIcon,
+        onClick: () => editor?.chain().focus().toggleItalic().run(),
+        isActive: editor?.isActive("italic"),
       },
       {
-          label: "Underline",
-          icon: UnderlineIcon,
-          onClick: () => editor?.chain().focus().toggleUnderline().run(),
-          isActive: editor?.isActive("underline"),
+        label: "Underline",
+        icon: UnderlineIcon,
+        onClick: () => editor?.chain().focus().toggleUnderline().run(),
+        isActive: editor?.isActive("underline"),
       }
     ],
     [
       {
-          label: "Comment",
-          icon: MessageSquarePlusIcon,
-          onClick: () => editor?.chain().focus().addPendingComment().run(),
-          isActive: editor?.isActive("liveblocksCommentMark")
+        label: "Comment",
+        icon: MessageSquarePlusIcon,
+        onClick: () => editor?.chain().focus().addPendingComment().run(),
+        isActive: editor?.isActive("liveblocksCommentMark")
       },
       {
-          label: "Todo List",
-          icon: ListTodoIcon,
-          onClick: () => editor?.chain().focus().toggleTaskList().run(),
-          isActive: editor?.isActive("taskList")
+        label: "Todo List",
+        icon: ListTodoIcon,
+        onClick: () => editor?.chain().focus().toggleTaskList().run(),
+        isActive: editor?.isActive("taskList")
         },
         {
-          label: "Remove Formatting",
-          icon: RemoveFormattingIcon,
-          onClick: () => editor?.chain().focus().unsetAllMarks().run(),
+        label: "Remove Formatting",
+        icon: RemoveFormattingIcon,
+        onClick: () => editor?.chain().focus().unsetAllMarks().run(),
         },
     ]
   ];
