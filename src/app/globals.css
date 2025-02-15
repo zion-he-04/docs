@@ -82,14 +82,12 @@ body {
   }
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
+@layer utilities {
+  .border-border {
+    border-color: #ccc; /* Adjust as needed */
   }
 }
+
 
 .tiptap {
   /* Heading */
@@ -254,30 +252,6 @@ body {
     }
   }
 
-  /* For mobile */
-  .floating-threads {
-    display: none;
-  }
-
-  /* For desktop */
-  .anchored-threads {
-    display: block;
-    max-width: 300px;
-    width: 100%;
-    position: absolute;
-    right: 12px;
-  }
-
-  @media (max-width: 640px) {
-    .floating-threads {
-      display: block;
-    }
-
-    .anchored-threads {
-      display: block;
-    }
-  }
-
   /* Link */
   a {
     color: var(--blue-2);
@@ -286,5 +260,29 @@ body {
     &:hover {
       @apply underline;
     }
+  }
+}
+
+/* For mobile */
+.floating-threads {
+  display: none;
+}
+
+/* For desktop */
+.anchored-threads {
+  display: block;
+  max-width: 300px;
+  width: 100%;
+  position: absolute;
+  right: 12px;
+}
+
+@media (max-width: 640px) {
+  .floating-threads {
+    display: block;
+  }
+
+  .anchored-threads {
+    display: block;
   }
 }

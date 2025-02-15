@@ -135,7 +135,7 @@ const LinkButton = () => {
         </button>
       </DropdownMenuTrigger>
 
-      <DropdownMenuContent className="p-2.5 flex items-center gap-x-2">
+      <DropdownMenuContent className="p-2.5 flex items-center gap-x-2 bg-white shadow-lg">
         {!hasLink ? (
           <>
             <Input
@@ -143,7 +143,10 @@ const LinkButton = () => {
               value={value}
               onChange={(e) => setValue(e.target.value)}
             />
-            <Button onClick={() => onChange(value)}>
+            <Button 
+              onClick={() => onChange(value)} 
+              className="bg-blue-400 hover:bg-blue-600 text-white"
+            >
               Apply
             </Button>
           </>
@@ -152,7 +155,10 @@ const LinkButton = () => {
             <span className="truncate max-w-[200px] text-blue-600 underline">
               {value.startsWith("http") ? value : `https://${value}`}
             </span>
-            <Button onClick={visitLink}>
+            <Button 
+              onClick={visitLink}
+              className="bg-blue-400 hover:bg-blue-600 text-white"
+            >
               Visit
             </Button>
           </>
