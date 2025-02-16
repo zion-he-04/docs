@@ -26,7 +26,7 @@ export async function getUsers() {
       avatar: user.imageUrl,
       colour: ""
     }));
-  
+    
     return users;
   }
   
