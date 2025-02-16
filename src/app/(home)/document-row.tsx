@@ -1,5 +1,5 @@
 import { Doc } from "../../../convex/_generated/dataModel";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { TableCell, TableRow } from "@/components/ui/table";
 import { format } from "date-fns";
 import { Building2Icon, CircleUserIcon } from "lucide-react";
 import { SiGoogledocs } from "react-icons/si";

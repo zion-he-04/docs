@@ -31,12 +31,20 @@ export async function POST(req: Request) {
 		return new Response("Unauthorised", { status: 401 });
 	}
 
+	// assign unique colour to each user
+	const name = user.fullName ?? user.primaryEmailAddress?.emailAddress ?? "Anonymous";
+	const nameToNumber = name.split("").reduce((acc, char) => acc + char.charCodeAt(0), 0);
+	const hue = Math.abs(nameToNumber) % 360;
+	const colour = `hsl(${hue}, 80%, 60%)`;
+
 	const session = liveblocks.prepareSession(user.id, {
-		userInfo: {
-			name: user.fullName ?? user.primaryEmailAddress?.emailAddress ?? "Anonymous",
-			avatar: user.imageUrl,
-		},
+	userInfo: {
+		name,
+		avatar: user.imageUrl,
+		colour,
+	},
 	});
+
 	session.allow(room, session.FULL_ACCESS);
 	const { body, status } = await session.authorize();
 
