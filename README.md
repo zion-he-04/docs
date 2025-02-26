@@ -2,18 +2,18 @@
 
 **Live Demo:** [docs-lime-pi.vercel.app](https://docs-lime-pi.vercel.app/)
 
-Docs is a real-time collaborative document editor built with **Next.js 15**, **React**, and **Tailwind CSS**. It supports live editing, rich text formatting, and seamless collaboration with features like comments, mentions, and cursor tracking. The platform is backed by **Convex** for database storage and **Liveblocks** for real-time synchronization.
+Docs is a real-time collaborative document editor built with **Next.js 15**, **React**, and **Tailwind CSS**. It supports live editing, text formatting, and collaboration with features such as comments, mentions, and user profiles. The platform is powered by **Convex** for database storage and **Liveblocks** for real-time synchronisation.
 
 ## 🚀 Features
 
 - **Text Editing** – Advanced text formatting with Tiptap  
 - **Real-time Collaboration** – Instant updates with Liveblocks  
-- **Database & Storage** – Powered by Convex  
+- **Database & Storage** – Backed by Convex  
 - **Commenting & Mentions** – Supports email and in-app notifications  
 - **Version Control** – Undo/redo history for document changes  
-- **Export & Sharing** – Supports several file formats (PDF, HTML, TXT, JSON)  
-- **Authentication & Workspaces** – User and organization profiles  
-- **Responsive Design** – Designed to work on all devices  
+- **Export & Sharing** – Supports multiple file formats (PDF, HTML, TXT, JSON)  
+- **Authentication & Workspaces** – User and organisation profiles  
+- **Responsive Design** – Optimised for all devices  
 - **And more...**  
 
 ## 🛠️ Tech Stack
@@ -37,4 +37,4 @@ Docs is a real-time collaborative document editor built with **Next.js 15**, **R
 
 - The floating composer for threads is not displaying the submit button properly.  
 - Implement a custom extension for line height.  
-- When removing the currently active document, an error is thrown before redirection to the homepage. This leads to undefined behavior and should be handled properly.  
+- When removing the currently active document, an error is thrown before redirection to the homepage. This leads to undefined behaviour and should be handled properly.  
