@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+📝 Docs - Real-time Collaborative Editor
+Live Demo: docs-lime-pi.vercel.app
 
-## Getting Started
+Docs is a real-time collaborative document editor built with Next.js 15, React, Tailwind CSS. It supports live editing, rich text formatting, and seamless collaboration with features like comments, mentions, and cursor tracking. The platform is backed by Convex for database storage and Liveblocks for real-time synchronization.
 
-First, run the development server:
+🚀 Features
+Text Editing – Advanced text formatting with Tiptap
+Real-time Collaboration – Instant updates with Liveblocks
+Database & Storage – Powered by Convex
+Commenting & Mentions – Supports email and in-app notifications
+Version Control – Undo/redo history for document changes
+Export & Sharing – Supports several file formats (PDF, HTML, TXT, JSON)
+Authentication & Workspaces – User and oraganisation profiles
+Responsive Design – Designed to work on all devices
+And more...
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+🛠️ Tech Stack
+Framework: Next.js 15, React
+UI: Tailwind CSS, Shadcn UI
+Editor: Tiptap
+Real-time Sync: Liveblocks
+Database: Convex
+Deployment: Vercel
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+📌 To Do's
+Features
+Enhanced offline support
+Advanced permission settings
+AI-powered document suggestions
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Fixes
+The floating composer for threads is not displaying the submit button properly.
+Implement a custom extension for line height.
+When removing the currently active document: error is thrown before we are redirected to homepage. This leads to undefined behaviour and we should handle it properly.
